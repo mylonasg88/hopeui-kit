@@ -33,6 +33,7 @@ jobs:
 
   #ESlint job
   eslint:
+    needs: test #this is the name of "test" job from above
     runs-on: ubuntu-latest
 
     strategy:
