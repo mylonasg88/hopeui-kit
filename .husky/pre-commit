@@ -1,1 +1,2 @@
 yarn test-husky
+npx eslint --config .eslintrc.husky.json .
