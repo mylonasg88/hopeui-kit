@@ -31,4 +31,4 @@ jobs:
     
     - name: Run Lint
       run: |
-        eslint --config .eslintrc.husky.json .
+        npx eslint --config .eslintrc.husky.json .
