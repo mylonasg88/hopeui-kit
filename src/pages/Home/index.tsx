@@ -5,7 +5,7 @@ import { GiSpiderMask } from 'react-icons/gi';
 import { Container, Section, Description, Warning, Link } from './styles';
 
 const Home = () => {
-  console.log('it happened...');
+  console.log('it happened..');
   return (
     <Container>
       <Section>
