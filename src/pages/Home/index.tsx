@@ -2,7 +2,7 @@
 import React from 'react';
 import { GiSpiderMask } from 'react-icons/gi';
 
-import { Container, Section, Description, Warning, Link } from './styles';
+import { Container, Section, Description } from './styles';
 
 const Home = () => {
   console.log('it happened..');
