@@ -6,6 +6,7 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
+    "@storybook/testing-library": "^0.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -18,7 +19,6 @@
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
     "react-scripts": "^5.0.1",
-    "@storybook/testing-library": "^0.2.0",
     "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
@@ -27,15 +27,22 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-husky": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "CI=true yarn test-husky && eslint --config .eslintrc.husky.json ."
+    }
   },
   "browserslist": {
     "production": [
@@ -72,6 +79,8 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4",
     "eslint-plugin-storybook": "^0.6.12",
+    "husky": "^9.0.11",
+    "pinst": "^3.0.0",
     "prettier": "^2.2.1",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.26",
